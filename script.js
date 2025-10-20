@@ -24,7 +24,7 @@ const calc = () => {
 //finding solutions
 const termConfig = exp => {
   newExp = ''
-  for (i in exp) { exp[i] == "-" && exp[i - 1] == "x" ? (newExp += "+-") : (newExp += exp[i]); }
+  for (i in exp) { exp[i] == "-" && (exp[i - 1] == "x" || exp[i -1] == "²") ? (newExp += "+-") : (newExp += exp[i]); }
   return newExp
 }
 
